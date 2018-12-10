@@ -119,7 +119,7 @@ We wouldn't be happy with the default project that `rails new` creates.
 1. We want to use RSpec instead of the TestUnit library.
 2. We want to use PostgreSQL instead of SQLite.
 
-Using the `-T` flag we can remove testing, so that we can decide what gem to install for this. Using the `-db` flag we can specify the relational database implementation to use. With all of these considerations, the command to run is `rails new -T -db postgresql <project name>`.
+Using the `-T` flag we can remove testing, so that we can decide what gem to install for this. Using the `-db` flag we can specify the relational database implementation to use. With all of these considerations, the command to run is `rails new <project name> -T -d postgresql`.
 
 We have decided to use [RSpec](http://rspec.info/) as a test runner. This is a popular choice for Ruby projects.
 
@@ -277,6 +277,6 @@ While confirming the validation of presence I found three ways described.
 
 1. `validates_presences_of :product` which seems to be deprecated since Rails 3.
 2. `validates :name, :presence => true` which would no longer be ideal since Ruby 1.9 reduced usage of 'hash rocket' syntax.
-3. `vaildates :name, presence: true` which seems to be the preferred way with the newer JSON style syntax.
+3. `validates :name, presence: true` which seems to be the preferred way with the newer JSON style syntax.
 
 I recommend keeping an eye on the date of instructional content and as much as possible __consult official documentation__.
